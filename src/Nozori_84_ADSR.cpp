@@ -201,7 +201,9 @@ struct Nozori_84_ADSRWidget : ModuleWidget {
 		warningDisplay->box.size = warnSize;
 		if (module)
    			warningDisplay->warn_status = &module->warn_status;
+		#ifndef METAMODULE
 		addChild(warningDisplay);
+		#endif
 	}
 	void appendContextMenu(Menu* menu) override {
 		Nozori_84_ADSR* module = dynamic_cast<Nozori_84_ADSR*>(this->module);

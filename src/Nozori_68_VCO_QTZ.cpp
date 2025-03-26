@@ -205,7 +205,9 @@ struct Nozori_68_VCO_QTZWidget : ModuleWidget {
 		warningDisplay->box.size = warnSize;
 		if (module)
    			warningDisplay->warn_status = &module->warn_status;
+		#ifndef METAMODULE
 		addChild(warningDisplay);
+		#endif
 	}
 
 	void appendContextMenu(Menu* menu) override {

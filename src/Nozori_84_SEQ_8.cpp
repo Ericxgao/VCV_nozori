@@ -201,7 +201,9 @@ struct Nozori_84_SEQ_8Widget : ModuleWidget {
 		warningDisplay->box.size = warnSize;
 		if (module)
    			warningDisplay->warn_status = &module->warn_status;
+		#ifndef METAMODULE
 		addChild(warningDisplay);
+		#endif
 	}
 	void appendContextMenu(Menu* menu) override {
 		Nozori_84_SEQ_8* module = dynamic_cast<Nozori_84_SEQ_8*>(this->module);
