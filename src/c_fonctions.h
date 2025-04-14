@@ -71,7 +71,7 @@ inline void set_led4(uint32_t value) { this->lights[LED4_LIGHT].setBrightness((f
 // toggle
 
 inline uint32_t get_toggle() { 
- return(2 - params[SWITCH_PARAM].getValue()); 
+ return(2 - roundf(params[SWITCH_PARAM].getValue())); 
 }
 
 // ------------------------------------------------------------------------------------------------------------
